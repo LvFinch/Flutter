@@ -1,7 +1,7 @@
 /*
  * -> Author : Akko
  * -> Date : 2020-05-15 18:05:18
- * -> LastEditTime : 2020-05-16 00:54:04
+ * -> LastEditTime : 2020-05-16 01:31:09
  * -> LastEditors : Akko
  * -> Description : Vector main code
  * -> FilePath : \vector\lib\main.dart
@@ -10,6 +10,7 @@
 import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:common_utils/common_utils.dart';
 
 void main() {
   runApp(MyApp());
@@ -57,9 +58,16 @@ class VectorAppBarTitleHint extends StatelessWidget {
   Widget build(BuildContext context) {
     // TODO: implement build
     DateTime NowTime = DateTime.now();
-    
+    // DateFormat _NowTime = DateFormat.HOUR_MINUTE;
+    // _NowTime = DateFormat.HOUR_MINUTE;
+    // if (_NowTime ) {
 
-    return Container(child: Text("$NowTime night"),);
+    // } else {
+    // }
+
+    return Container(
+      child: Text("$NowTime good night"),
+    );
   }
 }
 
