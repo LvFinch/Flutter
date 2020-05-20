@@ -1,14 +1,14 @@
 /*
  * -> Author : Akko
  * -> Date : 2020-05-20 17:06:25
- * -> LastEditTime : 2020-05-20 23:07:24
+ * -> LastEditTime : 2020-05-20 23:54:08
  * -> LastEditors : Akko
  * -> Description : Main
  * -> FilePath : \doing\lib\main.dart
  * -> Copyright  © 2020 Akko All rights reserved.
  */
 
-import 'package:doing/pages/test/wrap_widget.dart';
+import 'package:doing/pages/home_page.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -26,7 +26,7 @@ class MyApp extends StatelessWidget {
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
       // home: MyHomePage(title: 'Flutter Demo Home Page'),//Default Homepage
-      home: WrapWidget(),
+      home: HomePage(),
     );
   }
 }
