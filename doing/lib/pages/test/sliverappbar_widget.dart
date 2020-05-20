@@ -1,7 +1,7 @@
 /*
  * -> Author : Akko
  * -> Date : 2020-05-20 23:07:38
- * -> LastEditTime : 2020-05-20 23:10:06
+ * -> LastEditTime : 2020-05-20 23:33:09
  * -> LastEditors : Akko
  * -> Description : 
  * -> FilePath : \doing\lib\pages\test\sliverappbar_widget.dart
@@ -49,18 +49,6 @@ class SliverAppBarWidget extends StatelessWidget {
                 color: Colors.lightBlue,
               ),
             ),
-            actions: <Widget>[
-              IconButton(
-                icon: Icon(Icons.code),
-                onPressed: () => Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) =>
-                        CodeScreen(code: Code.sliverAppBarCode),
-                  ),
-                ),
-              )
-            ],
           ),
 
           ///Next sliver is the Sliver list that is used here to
