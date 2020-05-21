@@ -1,7 +1,7 @@
 /*
  * -> Author : Akko
  * -> Date : 2020-05-20 23:50:55
- * -> LastEditTime : 2020-05-21 23:29:38
+ * -> LastEditTime : 2020-05-22 00:36:50
  * -> LastEditors : Akko
  * -> Description : Home Page
  * -> FilePath : \doing\lib\pages\home_page.dart
@@ -23,24 +23,35 @@ class _DoingHomePageState extends State<DoingHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // appBar: AppBar(
-      //   title: Text(widget.title),
-      //   backgroundColor: Color.fromARGB(255, 135, 232, 222),
-      //   elevation: 1.0,
-      // ),
+      drawer: Drawer(
+        child: ListView(
+          padding: EdgeInsets.zero,
+          children: <Widget>[
+            DrawerHeader(
+              child: Text("Header"),
+              decoration: BoxDecoration(
+                color: Color.fromARGB(255, 255, 6, 6),
+              ),
+            ),
+            Icon(AntDesign.folder1,),
+            Icon(AntDesign.folderopen),
+            Icon(AntDesign.github),
+          ],
+        ),
+      ),
+
       body: CustomScrollView(
         slivers: <Widget>[
           ///First sliver is the App Bar
           SliverAppBar(
-            leading: Icon(
-              AntDesign.menu_unfold,
-              color: Color.fromARGB(255, 115, 166, 212),
-            ),
             elevation: 1.0,
             backgroundColor: Color.fromARGB(255, 135, 232, 222),
             floating: false, //true立刻收起,false跟随收起
             pinned: true,
             expandedHeight: 250.0,
+            actions: <Widget>[
+              Icon(MaterialIcons.expand_more)
+            ],
             flexibleSpace: FlexibleSpaceBar(
               centerTitle: true,
               title: Text(
