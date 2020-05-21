@@ -1,7 +1,7 @@
 /*
  * -> Author : Akko
  * -> Date : 2020-05-20 17:06:25
- * -> LastEditTime : 2020-05-21 22:36:00
+ * -> LastEditTime : 2020-05-21 23:13:14
  * -> LastEditors : Akko
  * -> Description : Main
  * -> FilePath : \doing\lib\main.dart
@@ -9,7 +9,7 @@
  */
 
 import 'package:doing/pages/home_page.dart';
-import 'package:doing/pages/launch_page.dart';
+import 'package:doing/routes/test.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -26,9 +26,13 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      // home: MyHomePage(title: 'Flutter Demo Home Page'),//Default Homepage
-      // home: DoingHomePage(title: "doing 666",),
-      home: DoingHomePage(title: "Doing",),
+      routes: {
+        "test_route": (context) => TestRoute(),
+        "home_page":(context)=> DoingHomePage(title: "test route",),
+      },
+      home: DoingHomePage(
+        title: "Doing",
+      ),
     );
   }
 }
