@@ -1,7 +1,7 @@
 /*
  * -> Author : Akko
  * -> Date : 2020-05-20 17:06:25
- * -> LastEditTime : 2020-05-20 23:54:08
+ * -> LastEditTime : 2020-05-21 22:36:00
  * -> LastEditors : Akko
  * -> Description : Main
  * -> FilePath : \doing\lib\main.dart
@@ -9,6 +9,7 @@
  */
 
 import 'package:doing/pages/home_page.dart';
+import 'package:doing/pages/launch_page.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -20,13 +21,14 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Doing',
       theme: ThemeData(
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
       // home: MyHomePage(title: 'Flutter Demo Home Page'),//Default Homepage
-      home: HomePage(),
+      // home: DoingHomePage(title: "doing 666",),
+      home: DoingHomePage(title: "Doing",),
     );
   }
 }
