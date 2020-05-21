@@ -1,7 +1,7 @@
 /*
  * -> Author : Akko
  * -> Date : 2020-05-20 23:32:13
- * -> LastEditTime : 2020-05-20 23:38:08
+ * -> LastEditTime : 2020-05-21 10:46:02
  * -> LastEditors : Akko
  * -> Description : 接口 => FloatingActionButtonWidget
  * -> FilePath : \doing\lib\pages\test\FAB_widget.dart
@@ -19,7 +19,7 @@ class _FloatingActionButtonWidgetState
     extends State<FloatingActionButtonWidget> {
   bool _isMini = false;
   FloatingActionButtonLocation _fabLocation =
-      FloatingActionButtonLocation.centerDocked;
+      FloatingActionButtonLocation.endDocked;
 
   static final GlobalKey<ScaffoldState> _scaffoldKey =
       GlobalKey<ScaffoldState>();
