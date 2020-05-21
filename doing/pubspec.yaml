@@ -32,6 +32,7 @@ dependencies:
   fluttertoast: ^4.0.1
   flutter_icons: ^1.1.0
   fluttie: ^0.5.0
+  frefresh: ^1.0.0
 
 dev_dependencies:
   flutter_test:
