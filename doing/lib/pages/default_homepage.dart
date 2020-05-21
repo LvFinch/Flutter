@@ -1,7 +1,7 @@
 /*
  * -> Author : Akko
  * -> Date : 2020-05-20 22:51:31
- * -> LastEditTime : 2020-05-20 22:52:42
+ * -> LastEditTime : 2020-05-21 10:10:20
  * -> LastEditors : Akko
  * -> Description : 
  * -> FilePath : \doing\lib\pages\default_homepage.dart
@@ -31,7 +31,7 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(widget.title),
+        title: Text("widget.title"),
       ),
       body: Center(
         child: Column(
