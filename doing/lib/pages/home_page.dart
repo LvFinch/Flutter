@@ -1,12 +1,13 @@
 /*
  * -> Author : Akko
  * -> Date : 2020-05-20 23:50:55
- * -> LastEditTime : 2020-05-22 00:36:50
+ * -> LastEditTime : 2020-05-22 21:57:01
  * -> LastEditors : Akko
  * -> Description : Home Page
  * -> FilePath : \doing\lib\pages\home_page.dart
  * -> Copyright  © 2020 Akko All rights reserved.
  */
+import 'package:doing/routes/help.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_icons/flutter_icons.dart';
 
@@ -14,6 +15,33 @@ class DoingHomePage extends StatefulWidget {
   DoingHomePage({Key key, this.title}) : super(key: key);
 
   final String title;
+
+  static const _TabPages = <Widget>[
+    Center(
+      child: Icon(
+        Icons.cloud,
+        size: 64.0,
+        color: Colors.teal,
+      ),
+    ),
+    Center(
+      child: Icon(
+        Icons.alarm,
+        size: 64.0,
+        color: Colors.cyan,
+      ),
+    ),
+    Center(
+      child: Icon(
+        Icons.forum,
+        size: 64.0,
+        color: Colors.blue,
+      ),
+    ),
+  ];
+  static const _Tabs = <Tab>[
+    Tab(icon: ,)
+  ];
 
   @override
   _DoingHomePageState createState() => _DoingHomePageState();
@@ -33,13 +61,14 @@ class _DoingHomePageState extends State<DoingHomePage> {
                 color: Color.fromARGB(255, 255, 6, 6),
               ),
             ),
-            Icon(AntDesign.folder1,),
+            Icon(
+              AntDesign.folder1,
+            ),
             Icon(AntDesign.folderopen),
             Icon(AntDesign.github),
           ],
         ),
       ),
-
       body: CustomScrollView(
         slivers: <Widget>[
           ///First sliver is the App Bar
@@ -50,7 +79,101 @@ class _DoingHomePageState extends State<DoingHomePage> {
             pinned: true,
             expandedHeight: 250.0,
             actions: <Widget>[
-              Icon(MaterialIcons.expand_more)
+              PopupMenuButton<String>(
+                // color: Colors.transparent,
+                elevation: 1.0,
+                offset: Offset(0, 71),
+                itemBuilder: (context) {
+                  return <PopupMenuEntry<String>>[
+                    PopupMenuItem<String>(
+                      value: 'help',
+                      child: FlatButton(
+                          onPressed: null,
+                          child: Column(
+                            children: <Widget>[
+                              Row(
+                                children: <Widget>[
+                                  Expanded(
+                                    flex: 1,
+                                    child: Icon(MaterialIcons.help_outline),
+                                  ),
+                                  Expanded(
+                                    flex: 2,
+                                    child: Center(
+                                      child: Text("帮助中心"),
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ],
+                          )),
+                    ),
+                    PopupMenuItem<String>(
+                      value: 'help',
+                      child: FlatButton(
+                          onPressed: null,
+                          child: Column(
+                            children: <Widget>[
+                              Row(
+                                children: <Widget>[
+                                  Expanded(
+                                    flex: 1,
+                                    child: Icon(MaterialIcons.help_outline),
+                                  ),
+                                  Expanded(
+                                    flex: 2,
+                                    child: Center(
+                                      child: Text("帮助中心"),
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ],
+                          )),
+                    ),
+                    PopupMenuItem<String>(
+                      value: 'help',
+                      child: FlatButton(
+                          onPressed: () {
+                            // Navigator.pushNamed(context, "help_route"),
+                            Navigator.push(
+                              context,
+                              PageRouteBuilder(
+                                transitionDuration:
+                                    Duration(milliseconds: 500), //动画时间为500毫秒
+                                pageBuilder: (BuildContext context,
+                                    Animation animation,
+                                    Animation secondaryAnimation) {
+                                  return FadeTransition(
+                                    opacity: animation,
+                                    child: HelpRoute(),
+                                  );
+                                },
+                              ),
+                            );
+                          },
+                          child: Column(
+                            children: <Widget>[
+                              Row(
+                                children: <Widget>[
+                                  Expanded(
+                                    flex: 1,
+                                    child: Icon(MaterialIcons.help_outline),
+                                  ),
+                                  Expanded(
+                                    flex: 2,
+                                    child: Center(
+                                      child: Text("帮助中心"),
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ],
+                          )),
+                    ),
+                  ];
+                },
+              )
             ],
             flexibleSpace: FlexibleSpaceBar(
               centerTitle: true,
