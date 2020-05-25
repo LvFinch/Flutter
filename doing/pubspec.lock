@@ -71,6 +71,13 @@ packages:
       url: "https://pub.flutter-io.cn"
     source: hosted
     version: "0.1.3"
+  curved_navigation_bar:
+    dependency: "direct main"
+    description:
+      name: curved_navigation_bar
+      url: "https://pub.flutter-io.cn"
+    source: hosted
+    version: "0.3.2"
   fbutton:
     dependency: "direct main"
     description:
@@ -146,6 +153,13 @@ packages:
     dependency: "direct main"
     description:
       name: fswitch
+      url: "https://pub.flutter-io.cn"
+    source: hosted
+    version: "1.1.2"
+  hidden_drawer_menu:
+    dependency: "direct main"
+    description:
+      name: hidden_drawer_menu
       url: "https://pub.flutter-io.cn"
     source: hosted
     version: "1.1.2"
