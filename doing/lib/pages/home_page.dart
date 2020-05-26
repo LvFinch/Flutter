@@ -1,7 +1,7 @@
 /*
  * -> Author : Akko
  * -> Date : 2020-05-20 23:50:55
- * -> LastEditTime : 2020-05-25 12:28:45
+ * -> LastEditTime : 2020-05-25 12:49:46
  * -> LastEditors : Akko
  * -> Description : Home Page
  * -> FilePath : \doing\lib\pages\home_page.dart
@@ -44,7 +44,7 @@ class _DoingHomePageState extends State<DoingHomePage>
   Widget build(BuildContext context) {
     return SimpleHiddenDrawer(
         menu: Menu(), //抽屉区域布局
-        screenSelectedBuilder: ( controller) {
+        screenSelectedBuilder: (position,controller) {
           return Scaffold(
             //页面主体区域
             // return Scaffold(
@@ -286,7 +286,7 @@ class _DoingHomePageState extends State<DoingHomePage>
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: <Widget>[
                       Center(
-                        child: Text("当"),
+                        child: Text("当前页面$position"),
                       ),
                       Center(
                         child: FlatButton(
