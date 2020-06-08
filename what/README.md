@@ -2,15 +2,33 @@
 
 A new Flutter project.
 
-## Getting Started
+## TODO
 
-This project is a starting point for a Flutter application.
+-   [ ] 启动页
+    -   [ ] 首次登陆提示页
+    -   [ ] 注册登录
+-   [ ] 首页
 
-A few resources to get you started if this is your first Flutter project:
+## 项目结构
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+### 启动页
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+### 首页
+
+# 日志
+
+## 20200607
+
+1.  创建项目
+2.  必要更改
+    1.  修改build.gradle
+    2.  修改沉浸式状态栏
+
+## 20200608
+
+1.  pubspec.yaml导包
+
+    ```dart
+    google_nav_bar: ^2.2.0
+    flutter_icons: ^1.1.0
+    ```
